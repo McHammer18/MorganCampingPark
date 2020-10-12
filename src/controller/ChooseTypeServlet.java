@@ -34,14 +34,16 @@ public class ChooseTypeServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String choice = request.getParameter("choice");
+		String choice = request.getParameter("type");
 		
 		if (choice.equals("camper")) {
 			//camper.jsp not yet created
-			getServletContext().getRequestDispatcher("/camper.jsp").forward(request, response);
+			System.out.println("campe");
+			//getServletContext().getRequestDispatcher("/camper.jsp").forward(request, response);
 		}
 		else if(choice.equals("hiker")) {
-			getServletContext().getRequestDispatcher("/hiker.jsp").forward(request, response);
+			System.out.println("hike");
+			//getServletContext().getRequestDispatcher("/hiker.jsp").forward(request, response);
 		}
 	}
 
