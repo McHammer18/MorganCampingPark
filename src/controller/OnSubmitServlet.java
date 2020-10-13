@@ -7,42 +7,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
-
-//this is where the user is either directed to a camper/hiker page
-
-
-
 /**
- * Servlet implementation class ChooseTypeServlet
+ * Servlet implementation class OnSubmitServlet
  */
-@WebServlet("/ChooseTypeServlet")
-public class ChooseTypeServlet extends HttpServlet {
+@WebServlet("/OnSubmitServlet")
+public class OnSubmitServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ChooseTypeServlet() {
+    public OnSubmitServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
-	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String choice = request.getParameter("type");
-		
-		if (choice.equals("camper")) {
-			//camper.jsp not yet created
-			getServletContext().getRequestDispatcher("/camper.jsp").forward(request, response);
-		}
-		else if(choice.equals("hiker")) {
-			getServletContext().getRequestDispatcher("/hiker.jsp").forward(request, response);
-		}
+		camper camp = new camper()
 	}
 
 }
