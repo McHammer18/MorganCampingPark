@@ -37,9 +37,7 @@ public class ChooseTypeServlet extends HttpServlet {
 		String choice = request.getParameter("type");
 		
 		if (choice.equals("camper")) {
-			//camper.jsp not yet created
-			System.out.println("campe");
-			//getServletContext().getRequestDispatcher("/camper.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/camper.jsp").forward(request, response);
 		}
 		else if(choice.equals("hiker")) {
 			System.out.println("hike");
