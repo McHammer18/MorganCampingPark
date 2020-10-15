@@ -1,6 +1,6 @@
 package models;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -22,9 +22,9 @@ public class campsite {
 	@Column(name="CAMP_NAME")
 	private String campName;
 	@Column(name="ARRIVAL_DATE")
-	private Date arrivalDate;
+	private LocalDate arrivalDate;
 	@Column(name="LEAVING_DAY")
-	private Date leavingDate;
+	private LocalDate leavingDate;
 	@ManyToOne (cascade=CascadeType.PERSIST)
 	@JoinColumn(name="CAMPER_ID")
 	private camper camper;
@@ -35,7 +35,7 @@ public class campsite {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public campsite(int id, String campName, Date arrivalDate, Date leavingDate, models.camper camper) {
+	public campsite(int id, String campName, LocalDate arrivalDate, LocalDate leavingDate, models.camper camper) {
 		super();
 		this.id = id;
 		this.campName = campName;
@@ -61,19 +61,19 @@ public class campsite {
 		this.campName = campName;
 	}
 
-	public Date getArrivalDate() {
+	public LocalDate getArrivalDate() {
 		return arrivalDate;
 	}
 
-	public void setArrivalDate(Date arrivalDate) {
+	public void setArrivalDate(LocalDate arrivalDate) {
 		this.arrivalDate = arrivalDate;
 	}
 
-	public Date getLeavingDate() {
+	public LocalDate getLeavingDate() {
 		return leavingDate;
 	}
 
-	public void setLeavingDate(Date leavingDate) {
+	public void setLeavingDate(LocalDate leavingDate) {
 		this.leavingDate = leavingDate;
 	}
 
