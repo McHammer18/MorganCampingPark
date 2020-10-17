@@ -37,6 +37,13 @@ public camper(int id, String firstName, String lastName, String phone) {
 		this.phone = phone;
 	}
 
+	public camper(String firstName, String lastName, String phone) {
+	super();
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.phone = phone;
+}
+
 
 
 	//getters and setters
