@@ -5,6 +5,7 @@
 		<class>models.campsite</class>
 		<class>models.activities</class>
 		<class>controller.LocalDateAttributeConverter</class>
+		<class>models.Hiker</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://camper-cis175.cta7wvbywkyo.us-east-1.rds.amazonaws.com/camp"/>

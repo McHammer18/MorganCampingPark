@@ -51,6 +51,7 @@ public class CamperItemHelper {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<camper> typedQuery	= em.createQuery("select c from camper c where c.firsrName = :selectedFisrtName", camper.class);
+		
 		typedQuery.setParameter("selectedFisrtName",	camperName);
 		List<camper> foundItems =	typedQuery.getResultList();
 		em.close();

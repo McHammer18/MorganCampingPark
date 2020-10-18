@@ -10,16 +10,16 @@
 	<h1>Enter details of hiker here</h1>
 	<form action = "OnSubmitServlet" method="post">
 		First name:
-		<input type="text" name="camperFirst" size="45">
+		<input type="text" name="firstName" size="45">
 		<br>
 		Last name:
-		<input type="text" name="camperLast" size="45">
-		<br>
-		Path to hike: 
-		<input type="text" name = "path" size = 45>
+		<input type="text" name="lastName" size="45">
 		<br>
 		Date:
-		<input type="text" name = "date" size = 45>
+		<input type="date" name = "date" value="YYYY-MM-DD">
+		<br>
+		Phone Number:
+		<input type="text" name = "phone" size = 45>
 		<br>
 		
 		<input type="submit" value ="Sign form"/>

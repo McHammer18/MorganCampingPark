@@ -40,7 +40,7 @@ public class ChooseTypeServlet extends HttpServlet {
 			getServletContext().getRequestDispatcher("/camper.jsp").forward(request, response);
 		}
 		else if(choice.equals("hiker")) {
-			System.out.println("hike");
+			getServletContext().getRequestDispatcher("/hiker.jsp").forward(request, response);
 			//getServletContext().getRequestDispatcher("/hiker.jsp").forward(request, response);
 		}
 	}
