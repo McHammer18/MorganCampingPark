@@ -17,7 +17,7 @@ public class activities {
 	private camper camper;
 	@Column(name="HIKING")
 	private boolean hiking;
-	@Column(name="FISHING")
+	@Column(name="CAMPING")
 	private boolean fishing;
 	@Column(name="BOATING")
 	private boolean boating;
