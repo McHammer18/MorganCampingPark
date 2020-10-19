@@ -19,14 +19,14 @@ public class Hiker {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="HIKER_ID")
 	private int id;
-	@Column(name="HIKER_FIRST")
+	@Column(name="FIRST_NAME")
 	private String firstName;
-	@Column(name="HIKER_LAST")
+	@Column(name="LAST_NAME")
 	private String lastName;
-	@Column(name="HIKER_PHONE")
-	private String phone;
 	@Column(name="HIKER_DATE")
 	private Date date;
+	@Column(name="PHONE")
+	private String phone;
 	
 	//constructors
 	public Hiker() {
