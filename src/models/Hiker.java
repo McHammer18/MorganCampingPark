@@ -19,14 +19,12 @@ public class Hiker {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="HIKER_ID")
 	private int id;
-	@Column(name="HIKER_FIRST")
+	@Column(name="FIRST_NAME")
 	private String firstName;
-	@Column(name="HIKER_LAST")
+	@Column(name="LAST_NAME")
 	private String lastName;
-	@Column(name="HIKER_PHONE")
+	@Column(name="PHONE")
 	private String phone;
-	@Column(name="HIKER_DATE")
-	private Date date;
 	
 	//constructors
 	public Hiker() {
@@ -36,25 +34,23 @@ public class Hiker {
 
 
 	
-	public Hiker(int id, String firstName, String lastName, String phone, Date date) {
+	public Hiker(int id, String firstName, String lastName, String phone) {
 		super();
 		//LocalDateAttributeConverter ld = new LocalDateAttributeConverter();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phone = phone;
-		//this.date = ld.convertToDatabaseColumn(date);
-		this.date = date;
+		//this.date = ld.convertToDatabaseColumn(date);=
 	}
 
-	public Hiker(String firstName, String lastName, String phone, Date date) {
+	public Hiker(String firstName, String lastName, String phone) {
 	super();
 	//LocalDateAttributeConverter ld = new LocalDateAttributeConverter();
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.phone = phone;
 	//this.date = ld.convertToDatabaseColumn(date);
-	this.date = date;
 }
 
 

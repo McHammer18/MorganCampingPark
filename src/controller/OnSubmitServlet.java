@@ -40,11 +40,8 @@ public class OnSubmitServlet extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String phone = request.getParameter("phone");
-		String date = request.getParameter("date");
-		Date dateS = java.sql.Date.valueOf(date);
-		System.out.println(dateS.toString());
 		//Using the model and controller to add input to a table
-		Hiker li = new Hiker(firstName, lastName, phone, dateS);
+		Hiker li = new Hiker(firstName, lastName, phone);
 
 		HikerHelper dao = new HikerHelper();
 		dao.insertItem(li);
