@@ -27,14 +27,14 @@ public class CamperItemHelper {
 		return allItems;
 	}
 	
-	public	void	deleteItem(camper	toDelete)	{
+	public	void	deleteItem(String toDelete)	{
 		EntityManager	em	=	emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<camper> typedQuery = em.createQuery("select c from camper c where c.firstName and c.lastName = :selectedName and c.phone = :selectedPhone", camper.class);
+		//TypedQuery<camper> typedQuery = em.createQuery("select c from camper c where c.CAMPER_FIRST = :first and c.CAMPER_LAST = :last and c.phone = :CAMPER_PHONE", camper.class);
+		TypedQuery<camper> typedQuery = em.createQuery("SELECT c FROM camper c where c.id = :ID", camper.class);
+
 		
-		typedQuery.setParameter("selectedCity",	toDelete.getFirstName());
-		typedQuery.setParameter("selectedNickName",	toDelete.getLastName());
-		typedQuery.setParameter("selectedNumOfPlayers", toDelete.getPhone());
+		typedQuery.setParameter("ID",	Integer.parseInt(toDelete));
 		
 		//gives one result
 		typedQuery.setMaxResults(1);

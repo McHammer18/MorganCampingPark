@@ -13,6 +13,10 @@ Last Name: <input type ="text"name ="lastName">
 Phone: <input type ="text"name ="phone">
 <input type ="submit"value="Add Item">
 </form>
+<form action = "DeleteCamperServlet"method="post">
+	ID to delete: <input type="text"name="delID">
+	<input type ="submit" value="delete camper">
+</form>
 <br />
 <a href ="index.html">change to hiker</a>
 </body>
