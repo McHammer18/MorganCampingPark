@@ -23,8 +23,6 @@ public class Hiker {
 	private String firstName;
 	@Column(name="LAST_NAME")
 	private String lastName;
-	@Column(name="HIKER_DATE")
-	private Date date;
 	@Column(name="PHONE")
 	private String phone;
 	
@@ -36,25 +34,23 @@ public class Hiker {
 
 
 	
-	public Hiker(int id, String firstName, String lastName, String phone, Date date) {
+	public Hiker(int id, String firstName, String lastName, String phone) {
 		super();
 		//LocalDateAttributeConverter ld = new LocalDateAttributeConverter();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phone = phone;
-		//this.date = ld.convertToDatabaseColumn(date);
-		this.date = date;
+		//this.date = ld.convertToDatabaseColumn(date);=
 	}
 
-	public Hiker(String firstName, String lastName, String phone, Date date) {
+	public Hiker(String firstName, String lastName, String phone) {
 	super();
 	//LocalDateAttributeConverter ld = new LocalDateAttributeConverter();
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.phone = phone;
 	//this.date = ld.convertToDatabaseColumn(date);
-	this.date = date;
 }
 
 
