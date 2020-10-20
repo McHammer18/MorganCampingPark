@@ -5,7 +5,7 @@
 <title>Park visitor list</title>
 </head>
 <body>
-	<p>This will eventually be the table storing names/info</p>
+	<p>Choose from options below to interact with the park guest list</p>
 	<form action = "ChooseTypeServlet" method="post">
 		<select name = "type" id = "type">
 			<option value = "camper">Camper</option>
@@ -13,8 +13,7 @@
 		</select>
 		<input type = "submit" name = "choice" value = "Sign List">
 	</form>
-	<form action = "ViewListServlet" method ="post">
-		<input type="submit" name = "view" value = "View List">
-	</form>
+	<a href="ViewList.jsp">View the guest list</a>
+
 </body>
 </html>

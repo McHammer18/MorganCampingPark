@@ -15,9 +15,6 @@
 		Last name:
 		<input type="text" name="lastName" size="45">
 		<br>
-		Date:
-		<input type="date" name = "date" value="YYYY-MM-DD">
-		<br>
 		Phone Number:
 		<input type="text" name = "phone" size = 45>
 		<br>
